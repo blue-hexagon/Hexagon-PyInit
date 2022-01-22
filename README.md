@@ -4,7 +4,7 @@ Fast and easy setup of various utilities and formatters.
 Copy over the following files into your new project:
 - `.gitignore`
 - `setup.cfg`
-- `pyproject.toml`
+- `pyproject.toml` - Modify `target-version = ['py310']` with your own version
 - `.pre-commit-config.yaml`
 - `LICENSE` (if you wish to add the MIT license)
 
