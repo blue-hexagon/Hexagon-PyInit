@@ -1,5 +1,11 @@
 ###########################################################
-#          This is an example - must be modified          #
+#          This is an example - must be modified          
+###########################################################
+# Create a MANIFEST.in
+# To include other files
+# Add:
+# include output README.md LICENSE
+
 ###########################################################
 import pathlib
 
