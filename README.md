@@ -10,7 +10,7 @@ Copy over the following files into your new project:
 
 # Setup
 - Initialize Git
-- pip install pre-commit
+- pip install pre-commit pytest pytest-cov
 - pre-commit install
 - pre-commit autoupdate
 
