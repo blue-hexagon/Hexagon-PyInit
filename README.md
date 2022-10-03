@@ -23,4 +23,4 @@ Now you have successfully setup the following tools:
 - `isort`
 
 All that's left is running:
-`poetry pre-commit run --all-files`
+`poetry run pre-commit run --all-files`
