@@ -27,10 +27,20 @@ All that's left is running:
 
 # Tasks
 A few tasks are defined and can be run with: `poetry run task <taskname>`
+
+## Tasks Definitions
 ```
 pc = { cmd = "pre-commit run --all-files", help = "runs precommit on all files" }
 test = { cmd = "pytest", help = "runs all tests" }
 test-cov = { cmd = "pytest --cov", help = "runs all tests with coverage" }
 test-cov-html = { cmd = "pytest --cov --cov-report html:coverage", help = "runs all tests with coverage and outputs a report found in ./coverage/index.html" }
 loc = { cmd = "poetry run pygount ./src --format=summary --suffix=py", help = "Count LOC for the project" }
+```
+## Tasks List
+```
+pc            runs precommit on all files
+test          runs all tests
+test-cov      runs all tests with coverage
+test-cov-html runs all tests with coverage and outputs a report found in ./coverage/index.html
+loc           Count LOC for the project
 ```
