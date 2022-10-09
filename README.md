@@ -1,4 +1,4 @@
-# Python Giggle
+# My PyInit
 Fast and easy setup of various utilities and formatters.
 
 Copy over the following files into your new project:
@@ -10,9 +10,9 @@ Copy over the following files into your new project:
 
 # Setup
 - Initialize Git: `git init`
-- poetry add --dev pre-commit pytest pytest-cov
-- poetry run pre-commit install
-- poetry run pre-commit autoupdate
+- `poetry add --dev pre-commit pytest pytest-cov`
+- `poetry run pre-commit install`
+- `poetry run pre-commit autoupdate`
 
 Now you have successfully setup the following tools:
 - `pre-commit` with various hooks
