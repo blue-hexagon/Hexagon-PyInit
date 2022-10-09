@@ -6,8 +6,15 @@ authors = ["yourname <example@example.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+blessed = "^1.19.1"
+numpy = "^1.23.2"
 
 [tool.poetry.dev-dependencies]
+pre-commit = "^2.20.0"
+pytest = "^7.1.2"
+pytest-cov = "^4.0.0"
+pygount = "^1.4.0"
+taskipy = "^1.10.3"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
@@ -32,6 +39,16 @@ exclude = '''
     | dist
   )/
   | foo.py           # also separately exclude a file named foo.py in
-                     # the root of the project
 )
 '''
+extend-exclude = '''
+(
+  ^/src/.../xxx.py$
+)
+'''
+[tool.taskipy.tasks]
+pc = { cmd = "pre-commit run --all-files", help = "runs precommit on all files" }
+test = { cmd = "pytest", help = "runs all tests" }
+test-cov = { cmd = "pytest --cov", help = "runs all tests with coverage" }
+test-cov-html = { cmd = "pytest --cov --cov-report html:coverage", help = "runs all tests with coverage and outputs a report found in ./coverage/index.html" }
+loc = { cmd = "poetry run pygount ./src --format=summary --suffix=py", help = "Count LOC for the project" }
